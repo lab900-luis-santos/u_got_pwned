@@ -95,21 +95,24 @@
 </body>
 
 <script>
-    document.querySelector("form").addEventListener("submit", handleSubmit);
 
     const handleSubmit = (e) => {
-        e.preventDefault()
-        let myForm = document.getElementById('dogPictures');
-        let formData = new FormData(myForm)
-        fetch('/', {
-            method: 'POST',
-            headers: { "Content-Type": "multipart/form-data" },
-            body: new URLSearchParams(formData).toString()
-        }).then(() => {
-            window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfRB1fwx3CDl0tgSElKcWZrpulCZWvqJSqh5mrJnWzw6kjSCQ/viewform';
-        }).catch((error) =>
-            alert(error))
-    }
+            e.preventDefault()
+            let myForm = document.getElementById('dogPictures');
+            let formData = new FormData(myForm)
+            fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "multipart/form-data" },
+                body: new URLSearchParams(formData).toString()
+            }).then(() => {
+                window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfRB1fwx3CDl0tgSElKcWZrpulCZWvqJSqh5mrJnWzw6kjSCQ/viewform';
+            }).catch((error) =>
+                alert(error))
+        }
+
+    document.querySelector("form").addEventListener("submit", handleSubmit);
+
+    
 </script>
 
 </html>
